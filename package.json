@@ -1,0 +1,35 @@
+{
+  "name": "redux",
+  "version": "1.0.0",
+  "description": "learn redux",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/youngclean/redux.git"
+  },
+  "keywords": [
+    "redux"
+  ],
+  "author": "youngclean",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/youngclean/redux/issues"
+  },
+  "homepage": "https://github.com/youngclean/redux#readme",
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.4",
+    "less-loader": "^4.0.4",
+    "react": "^15.5.4",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.0.0",
+    "webpack-dev-server": "^2.5.0"
+  }
+}
