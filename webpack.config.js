@@ -3,10 +3,14 @@ const webpack = require('webpack');
 
 console.log(`__dirname=${__dirname}`);
 module.exports = {
-  entry: './src/test/index.js', //入口
+  context: path.resolve(__dirname, "src"),
+  entry: {
+    simple: './simple/index.js',
+    react:  './react/index.js',
+  },
   output: {
     path: path.resolve(__dirname, 'bin'),  //输出
-    filename: 'index.bundle.js'
+    filename: '[name].js'
   },
   module: {
     rules: [{
