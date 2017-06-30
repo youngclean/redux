@@ -5,7 +5,6 @@ const config = require('./webpack.config.js');
 const compile = webpack(config);
 
 new WebpackDevServer(compile, {
-  publicPath: config.output.publicPath,
   hot: true,
   stats:{
     colors: true
