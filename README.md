@@ -1,5 +1,14 @@
 # redux
 
+### 安装
+`npm install`
+
+### 编译
+`npm run build`或 `webpack`
+
+### 启动
+`npm run start`
+
 ### 动机
 **背景**：SPA开发
 
