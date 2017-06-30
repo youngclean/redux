@@ -6,7 +6,7 @@ class Counter extends PureComponent {
      const { value, onIncrement, onDecrement } = this.props
     return (
       <p>
-        clicked: {value} 次
+        {value}
         <br/>
         <button onClick={onIncrement}>+</button>
         <button onClick={onDecrement}>-</button>
