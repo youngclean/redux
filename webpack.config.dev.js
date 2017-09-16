@@ -5,18 +5,25 @@ const srcPath = './src';
 module.exports = {
   entry: {
     simple: path.resolve(srcPath, 'simple/index.js'),
-    react: path.resolve(srcPath, 'react/index.js'),
-    todo: path.resolve(srcPath, 'todo/index.js'),
+    react:  path.resolve(srcPath, 'react/index.js'),
+    todo: 
+    [
+      'webpack/hot/dev-server',
+      'webpack-dev-server/client?http://127.0.0.1:3002',
+       path.resolve(srcPath, 'todo/index.js')
+    ],
   },
   output: {
     path: path.resolve(__dirname, 'bin'),  //输出
     filename: '[name].js',
+    publicPath: '/',
   },
+
   module: {
     rules: [{
       test: /\.js$/,
       exclude: /node_modules/,
-      use: ['babel-loader'],
+      use: ['react-hot-loader', 'babel-loader'],
     },
     { test: /\.(less|css)$/,
       use: ['style-loader', 'css-loader', 'less-loader'],
@@ -29,4 +36,5 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin() // 启用 HMR
   ],
+
 }
